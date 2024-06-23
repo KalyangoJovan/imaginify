@@ -53,12 +53,12 @@ export const Collection = ({
         {hasSearch && <Search />}
       </div>
 
-      {images > 0 ? (
+      {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
             <Card 
+            key={image.id}
             image={image}
-            key={image._id} 
             
             />
           ))}
